@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bafyth's 3rd Website</title>
+    <style>
+        /* Add some basic styling for readability */
+        body {
+            font-family: Arial, sans-serif;
+        }
+        /* Style the radio button */
+        input[type="radio"] {
+            margin-right: 10px;
+        }
+        /* Add a class for the correct answer */
+        .correct-answer {
+            background-color: green;
+        }
+        /* Add a class for incorrect answers */
+        .incorrect-answer {
+            background-color: red;
+        }
+    </style>
+
+<style>
+    .uae-flag {
+        width: 300px;
+        height: 200px;
+        background: linear-gradient(90deg, #EF3340 33.33%, #FFFFFF 33.33%, #FFFFFF 66.66%, #009739 66.66%);
+        /* Add a border if desired */
+        border: 1px solid #000000;
+    }
+</style>
+
+
+</head>
+<body>
+    <h1>Who is Bafyth's crush? من هو البافيث</h1>
+    <form id="answerForm">
+        <label for="userAnswer">Enter your answer:</label>
+        <input type="text" id="userAnswer" required><br>
+        <button type="submit">Check Answer</button>
+    </form>
+
+    <div id="radioContainer" style="display: none;">
+        <p style="color:blue;">Great Job!   But which one is it?:</p>
+        <input type="radio" name="reward" value="gift" id="gift">
+        <label for="gift">.A</label>
+
+        <br>
+
+        <!-- Additional radio options -->
+        <input type="radio" name="reward" value="voucher" id="voucher" class="correct-answer">
+        <label for="voucher">.S</label>
+
+
+        <br>
+        <input type="radio" name="reward" value="discount" id="discount">
+        <label for="discount">.V</label>
+
+
+        <br>
+        <input type="radio" name="reward" value="bonus" id="bonus">
+        <label for="bonus">.X</label>
+    </div>
+
+   
+
+    <script>
+        // Get the form element
+        const form = document.getElementById('answerForm');
+        const radioContainer = document.getElementById('radioContainer');
+        const submitButton = document.getElementById('submitButton');
+
+        // Add an event listener for form submission
+        form.addEventListener('submit', function (event) {
+            event.preventDefault(); // Prevent the form from submitting
+
+            // Get the user's answer
+            const userAnswer = document.getElementById('userAnswer').value;
+
+            // Validate the answer (you can replace this with your specific validation logic)
+            const correctAnswer = 'Sahithi'; // Example correct answer
+            if (userAnswer === correctAnswer) {
+                alert('Correct! 🎉 Congratulations!');
+                radioContainer.style.display = 'block'; // Show the radio buttons
+                submitButton.style.display = 'block'; // Show the submit button
+            } else {
+                alert('Incorrect. Please try again.'); // Display an error message
+                document.querySelectorAll('input[type="radio"]').forEach((radio) => {
+                    radio.classList.add('incorrect-answer'); // Add the class for incorrect answers
+                });
+            }
+        });
+
+        // Add an event listener for radio button selection
+        document.querySelectorAll('input[type="radio"]').forEach((radio) => {
+            radio.addEventListener('change', function () {
+                if (this.classList.contains('correct-answer')) {
+                    this.parentElement.style.backgroundColor = 'green';
+                } else {
+                    this.parentElement.style.backgroundColor = 'red';
+                }
+            });
+        });
+    </script>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<h1>Hello  مرحبًا</h1> 
+
+<pre style="size:50px">I'm Bafyth, and I'm a front-end HTML developer, and I know a little bit of CSS and JavaScript too.
+I support Arabism, I speak a little bit of Arabic, and I know a little bit of the geography of the UAE.
+When I grow up, I want to be a front-end developer at Google because Google employees get paid very high salaries, and that would be my dream job.
+
+
+
+
+أنا بافيث، وأنا مطور لغة ترميز النص الفائق للواجهة الأمامية، وأعرف القليل من أوراق الأنماط المتتالية وجافا سكريبت أيضًا.
+أنا أؤيد العروبة، وأتحدث قليلاً من اللغة العربية، وأعرف قليلاً عن جغرافية دولة الإمارات العربية المتحدة.
+عندما أكبر، أريد أن أصبح مطورًا للواجهة الأمامية في وظيفتي لأن موظفي الوظيفة يحصلون على رواتب عالية جدًا، وستكون هذه وظيفة أحلامي.
+
+
+</pre>
+<br>
+<h4>I love  أنا أحب:</h4>
+<ul>
+
+    <li>Coding  الترميز</li>
+    <li>Math  الرياضيات</li>
+    <li>My I-pad  الآيباد الخاص بي</li>
+    <li>United Arab Emirates  الإمارات العربية المتحدة</li>
+
+</ul>
+<br>
+<br>
+
+<h1>Thank you!  شكرًا لك</h1>
+
+</body>
+</html>
